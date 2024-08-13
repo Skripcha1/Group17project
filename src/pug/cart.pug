@@ -1,0 +1,76 @@
+---
+title: Hygge
+---
+extends layouts/_layout
+block content
+	.breadcrumbs
+		.breadcrumbs__center.center
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="index.html") Home Page
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="category.html") Categories
+				li.breadcrumbs__item Shopping Cart
+	.cart.section
+		.cart__center.center
+			.cart__head
+				.cart__box
+					.cart__stage.stage - Your Cart
+					h2.cart__title.title Shopping Cart
+				button.cart__btn.btn.btn_border Clear All
+			.cart__row
+				.cart__col
+					.cart__list
+						.cart__item
+							a.cart__preview(href="#")
+								img.cart__pic(src="img/products/product-pic-4.png" alt="")
+							.cart__details
+								a.cart__product(href="#") Sleepless Night
+								.cart__price
+									.cart__actual $97
+								.cart__control
+									.cart__counter.counter.js-counter
+										button.counter__btn.counter__btn_minus.js-counter-minus(type="button")
+											+i('arrow-prev')
+										input.counter__input.js-counter-input(type="text" value="1" size="3")
+										button.counter__btn.counter__btn_plus.js-counter-plus(type="button")
+											+i('arrow-next')
+									button.cart__remove
+										+i('close')
+						.cart__item
+							a.cart__preview(href="#")
+								img.cart__pic(src="img/products/product-pic-2.png" alt="")
+							.cart__details
+								a.cart__product(href="#") Tired Eyes Cream
+								.cart__price
+									.cart__old $68
+									.cart__actual $56
+								.cart__control
+									.cart__counter.counter.js-counter
+										button.counter__btn.counter__btn_minus.js-counter-minus(type="button")
+											+i('arrow-prev')
+										input.counter__input.js-counter-input(type="text" value="1" size="3")
+										button.counter__btn.counter__btn_plus.js-counter-plus(type="button")
+											+i('arrow-next')
+									button.cart__remove
+										+i('close')
+				.cart__col
+					.cart__receipt
+						.cart__category Cart Total
+						.cart__wrap
+							.cart__line
+								.cart__text Subtotal:
+								.cart__text $209
+							.cart__line
+								.cart__text Tax:
+								.cart__text $20.73
+							.cart__line
+								.cart__text Shipping:
+								.cart__text $15
+							.cart__line.cart__line_total
+								.cart__text Total:
+								.cart__text $224
+						a.cart__btn.btn.btn_green.btn_wide(href="checkout.html") Checkout
+	+newsletter
+
+

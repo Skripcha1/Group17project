@@ -1,0 +1,64 @@
+---
+title: Hygge
+classAbout: active
+---
+extends layouts/_layout
+block content
+	.breadcrumbs
+		.breadcrumbs__center.center
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="index.html") Home Page
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="#") Navigation
+				li.breadcrumbs__item About
+	.company.section.js-faq
+		.company__wrap.section
+			.company__center.center
+				.company__stage.stage - Learn More
+				h2.company__title.title.title_mb-lg All About Us
+				.company__bg(style="background-image: url('img/company-bg.jpg');")
+		.company__container.section
+			.company__center.center
+				.company__row
+					.company__col
+						.company__stage.stage - How it has Started
+						h2.company__title.title How and When it has All Started
+						.company__photo(style="background-image: url('img/company-photo.jpg');")
+					.company__col
+						.company__item
+							.company__category Natural Ingredients Only
+							.company__text 10 years ago, when one of the co-founders came up with the idea of making skincare and beauty products using only natural ingreadients, he did not even think twice.
+						.company__item
+							.company__category Affordable Pricing Strategy
+							.company__text One of our main goals from the start was to offer high quality products that would also have affordable prices. We just can’t believe that we have finally achieved this and now we are proud of it.
+	.about.section
+		.about__center.center
+			.about__stage.stage - Company Values
+			h2.about__title.title.title_mb-lg Our Core Values
+			.about__list
+				.about__item
+					.about__icon
+						svg(xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round")
+							path(d="M30 9L17.91 20.875l-6.364-6.25L2 24")
+							path(d="M22 9h8v8")
+					.about__category Great Innovation
+					.about__text We are always focusing on making all our products as innovative as possible.
+				.about__item
+					.about__icon
+						svg(xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none")
+							path(d="M16 3l4.326 8.557L30 12.938l-7 6.657L24.652 29 16 24.557 7.348 29 9 19.595l-7-6.657 9.674-1.38L16 3z" stroke="#000" stroke-width="2.5" stroke-linejoin="round")
+					.about__category High Quality
+					.about__text One of our main values is the quality of the products that we sell to the customers.
+				.about__item
+					.about__icon
+						svg(xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="#000" stroke-width="2.5" stroke-linejoin="round")
+							path(d="M28 30v-3a6 6 0 0 0-6-6H10a6 6 0 0 0-6 6v3" stroke-linecap="round")
+							path(d="M16 14a6 6 0 1 0 0-12 6 6 0 1 0 0 12z")
+					.about__category Teamwork Matters
+					.about__text We believe that being a successful company is all about being a team.
+			.about__btns
+				a.about__btn.btn.btn_green(href="careers-page.html") View Jobs
+	+newsletter
+
+

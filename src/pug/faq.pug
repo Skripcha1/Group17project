@@ -1,0 +1,106 @@
+---
+title: Hygge
+---
+extends layouts/_layout
+block content
+	.breadcrumbs
+		.breadcrumbs__center.center
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="index.html") Home Page
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="category.html") Categories
+				li.breadcrumbs__item FAQ Page
+	.faq.section.js-faq
+		.faq__center.center
+			.faq__stage.stage - Find the Answers
+			h2.faq__title.title.title_mb-lg Frequently Asked <br>Questions
+			.filters.js-filters
+				.filters__sorting
+					.filters__open.js-filters-open Filter By
+					.filters__wrap.js-filters-wrap
+						.filters__field.field
+							.field__wrap
+								select.field__select
+									option Topic
+									option Sort By
+									option Sort By
+						.filters__field.field
+							.field__wrap
+								select.field__select
+									option Category
+									option Sort By
+									option Sort By
+					.filters__field.field
+						.field__wrap
+							select.field__select
+								option Sort By
+								option Sort By
+								option Sort By
+			.faq__container
+				.faq__section
+					.faq__category General
+					.faq__list
+						.faq__item.js-faq-item
+							.faq__head.js-faq-head 1. How do I place an order on your website?
+								.faq__arrow
+							.faq__body.js-faq-body All you need to do to place an order on our wesbite is to choose the product that you would like to buy, then add it to cart and pay for it using any of the supported payment methods. 
+						.faq__item.js-faq-item
+							.faq__head.js-faq-head 2. What is your return policy?
+								.faq__arrow
+							.faq__body.js-faq-body All you need to do to place an order on our wesbite is to choose the product that you would like to buy, then add it to cart and pay for it using any of the supported payment methods. 
+						.faq__item.js-faq-item
+							.faq__head.js-faq-head 3. Do you offer an option to send a product as a gift?
+								.faq__arrow
+							.faq__body.js-faq-body All you need to do to place an order on our wesbite is to choose the product that you would like to buy, then add it to cart and pay for it using any of the supported payment methods. 
+				.faq__section
+					.faq__category Checkout
+					.faq__list
+						.faq__item.js-faq-item
+							.faq__head.js-faq-head 1. What payment methods do you accept?
+								.faq__arrow
+							.faq__body.js-faq-body All you need to do to place an order on our wesbite is to choose the product that you would like to buy, then add it to cart and pay for it using any of the supported payment methods. 
+						.faq__item.js-faq-item
+							.faq__head.js-faq-head 2. Do you offer an option to pay for the product over time?
+								.faq__arrow
+							.faq__body.js-faq-body Yes, we do. We have partnered with a few companies that offer such option.
+				.faq__section
+					.faq__category Shipping
+					.faq__list
+						.faq__item.js-faq-item
+							.faq__head.js-faq-head 1. Do I have to pay for the shipping?
+								.faq__arrow
+							.faq__body.js-faq-body Yes, we do. We have partnered with a few companies that offer such option.
+						.faq__item.js-faq-item
+							.faq__head.js-faq-head 2. How long does it take for you to dispatch my order?
+								.faq__arrow
+							.faq__body.js-faq-body Yes, we do. We have partnered with a few companies that offer such option.
+						.faq__item.js-faq-item
+							.faq__head.js-faq-head 3. What shipping company do you use?
+								.faq__arrow
+							.faq__body.js-faq-body Yes, we do. We have partnered with a few companies that offer such option.
+						.faq__item.js-faq-item
+							.faq__head.js-faq-head 4. How long does it usually take for my order to arrive?
+								.faq__arrow
+							.faq__body.js-faq-body Yes, we do. We have partnered with a few companies that offer such option.
+				.faq__section
+					.faq__category Discounts
+					.faq__list
+						.faq__item.js-faq-item
+							.faq__head.js-faq-head 1. Do you offer any discounts on your website?
+								.faq__arrow
+							.faq__body.js-faq-body Yes, we do. We have partnered with a few companies that offer such option.
+				.faq__section
+					.faq__category Other
+					.faq__list
+						.faq__item.js-faq-item
+							.faq__head.js-faq-head 1. Where can I find the reviews?
+								.faq__arrow
+							.faq__body.js-faq-body Please visit our <a class="faq__link" href="#">reviews page</a> to find out more about that.
+						.faq__item.js-faq-item
+							.faq__head.js-faq-head 2. How do I contact you?
+								.faq__arrow
+							.faq__body.js-faq-body Yes, we do. We have partnered with a few companies that offer such option.
+	+newsletter
+
+

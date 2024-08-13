@@ -1,0 +1,64 @@
+.checkbox
+  display: inline-block
+  position: relative
+  user-select: none 
+  cursor: pointer
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  &__input
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0 
+  &__in
+    display: flex
+    transition: opacity .25s 
+  &__tick
+    position: relative
+    flex-shrink: 0
+    width: 32px
+    height: 32px
+    margin-right: 16px
+    border-radius: 50%
+    border: 2px solid $gray
+    font-size: 0 
+    transition: all .25s 
+    +m
+      width: 24px
+      height: 24px
+      margin-right: 8px
+  &__text
+    padding-top: 3px
+    font-size: 20px
+    line-height: 1.4
+    color: $bl 
+    +m
+      padding-top: 2px
+      font-size: 16px
+  &:hover &__tick
+    border-color: $green 
+    +t
+      border-color: $gray 
+  &__link
+    text-decoration: underline 
+    font-weight: 600
+    color: $bl
+    &:hover
+      text-decoration: none
+  &__input:checked + &__in &__tick
+    border-color: $green 
+    border-width: 8px 
+    +m
+      border-width: 6px 
+
++dark
+  .checkbox
+    &__tick
+      border-color: $dark
+    &:hover .checkbox__tick
+      +t
+        border-color: $green
+    &__text,
+    &__link
+      color: $dark-wh
+    &__input:checked + .checkbox__in .checkbox__tick
+      border-color: $green

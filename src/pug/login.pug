@@ -1,0 +1,40 @@
+---
+title: Hygge
+---
+extends layouts/_layout
+block content
+	.breadcrumbs
+		.breadcrumbs__center.center
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="index.html") Home Page
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="category.html") Categories
+				li.breadcrumbs__item Login
+	.login.section
+		.login__details
+			.login__center.center
+				.login__stage.stage - Login
+				h2.login__title.title.title_mb-lg Login to Your <br>Account
+				form.login__form
+					.login__field.field
+						.field__label Email Address
+						.field__wrap
+							input.field__input(type="text" name="address")
+					.login__field.field
+						.field__label Password
+						.field__wrap
+								input.field__input(type="password" name="password")
+					label.login__checkbox.checkbox
+						input.checkbox__input.js-checkout-checkbox(type="checkbox" checked)
+						span.checkbox__in
+							span.checkbox__tick
+							span.checkbox__text Remember me
+					.login__btns
+						button.login__btn.btn.btn_green.btn_wide Login
+					.login__row
+						.login__col
+							a.login__btn.btn.btn_border.btn_wide(href="sign-up.html") Create Account 
+						.login__col
+							a.login__link(href="#") Forgot Password?
+

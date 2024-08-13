@@ -1,0 +1,157 @@
+.header
+  position: relative
+  z-index: 20
+  margin-bottom: 46px
+  padding: 49px 0 
+  +x
+    margin-bottom: 15px
+  +t
+    margin-bottom: 32px
+    padding: 32px 0 
+  +m
+    margin-bottom: 24px
+  &__center
+    position: relative
+    z-index: 5
+    display: flex
+    align-items: center
+  &__logo
+    margin-right: auto
+    font-size: 0
+    +t
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      margin: 0
+    +m
+      left: calc(50% + 7px) 
+  &__logo &__pic
+    &_white-desktop,
+    &_black-desktop
+      +m
+        display: none
+    &_white-desktop
+      display: none
+    &_white-mobile,
+    &_black-mobile
+      display: none
+    &_black-mobile
+      +m
+        display: inline-block
+  &__control
+    display: flex
+    align-items: center
+  &__item
+    position: relative
+    font-size: 0
+    &_hidden
+      +m
+        display: none
+    +nl
+      margin-right: 36px
+      +m
+        margin: 0
+  &__body
+    position: absolute
+    top: 100%
+    right: -56px
+    width: 488px
+    padding-top: 28px
+    visibility: hidden
+    opacity: 0
+    transition: all .25s 
+    +d
+      display: none
+  &__item:hover &__body
+    visibility: visible
+    opacity: 1
+  &__link
+    display: inline-block
+    font-size: 0
+    transition: opacity .25s 
+    .icon
+      width: 24px
+      height: 24px
+      fill: $bl-dark
+      transition: fill .25s 
+    &:hover .icon
+      fill: rgba($bl-dark, .75) 
+    &_cart
+      position: relative
+      &:before
+        content: ""
+        position: absolute
+        top: -5px
+        right: -8px
+        width: 16px
+        height: 16px
+        border-radius: 50%
+        border: 2px solid $wh 
+        background: $pink  
+  &__burger
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    width: 48px
+    height: 48px
+    padding: 5px 
+    border-radius: 50% 
+    background: $gray 
+    font-size: 0
+    transition: opacity .25s
+    +t
+      position: relative
+      top: auto
+      left: auto
+      transform: translate(0,0)
+      margin-right: auto
+    &:before,
+    &:after
+      content: ""
+      display: inline-block
+      width: 22px
+      height: 2px
+      background: $bl-dark
+      border-radius: 2px
+      transition: transform .25s 
+    &:before
+      margin-bottom: 3px
+    &:after
+      margin-top: 3px
+    &:hover
+      opacity: .85 
+    &.active
+      &:before
+        transform: translateY(4px) rotate(45deg) 
+      &:after
+        transform: translateY(-4px) rotate(-45deg)
+
++dark
+  .header
+    &__logo
+      .header__pic_black-desktop
+        display: none
+      .header__pic_white-desktop
+        display: inline-block
+        +m
+          display: none
+      .header__pic_black-mobile
+        +m
+          display: none
+      .header__pic_white-mobile
+        +m
+          display: inline-block
+    &__burger
+      background: $dark 
+      &:before,
+      &:after
+        background: $wh 
+    &__link
+      .icon
+        fill: $wh
+      &:hover .icon
+        fill: rgba($wh, .75)
+      &_cart:before
+        border-color: $bg-dark 

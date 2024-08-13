@@ -1,0 +1,155 @@
+.review
+  &__container
+    display: flex
+    min-height: 600px
+    padding: 48px 96px
+    border-radius: 64px  
+    background: $gray 
+    +x
+      padding: 48px 
+    +d
+      min-height: 505px
+      padding: 24px 48px 
+    +t
+      display: block
+      min-height: 100% 
+      padding: 0 
+      background: none 
+      border-radius: 0
+      text-align: center 
+  &__title
+    +t
+      font-size: 32px
+      line-height: 1.5
+  &__box
+    align-self: center
+    max-width: 480px
+    margin-right: auto
+    +d
+      padding-right: 40px
+    +t
+      max-width: 100%
+      margin: 0 0 64px  
+      padding: 0
+    +m
+      margin-bottom: 56px
+  &__wrap
+    align-self: flex-end
+    flex-shrink: 0
+    width: 400px
+    +t
+      width: 100% 
+  &__slider
+    padding-bottom: 112px
+    visibility: hidden
+    +d
+      padding-bottom: 88px
+    +t
+      padding-bottom: 96px
+    +m
+      padding-bottom: 88px
+    &.slick-initialized
+      visibility: visible
+  &__ava
+    width: 80px
+    height: 80px
+    margin-bottom: 32px
+    padding: 6px
+    border-radius: 50%
+    border: 2px solid $green
+    background: $wh 
+    overflow: hidden
+    font-size: 0
+    +t
+      margin: 0 auto 32px 
+  &__ava &__pic
+    width: 100% 
+    min-height: 100% 
+    border-radius: 50% 
+  &__author
+    margin-bottom: 16px
+    font-size: 24px
+    font-weight: 600
+    line-height: (40/24)  
+  &__text
+    font-size: 20px
+    line-height: 1.6
+  .slick-track
+    display: flex
+    align-items: flex-end
+    +t
+      display: block
+  .slick-dots
+    display: flex
+    margin-top: 40px
+    +t
+      justify-content: center
+    +m
+      margin-top: 32px
+    li
+      font-size: 0
+      button
+        width: 8px
+        height: 8px
+        border: 1px solid $gray
+        border-radius: 50%
+        background: $green
+        transition: all .25s
+        font-size: 0
+        &:hover
+          opacity: .7 
+      &.slick-active button
+        border-color: $green
+        background: $wh 
+        opacity: 1 
+      +nl
+        margin-right: 16px
+  .slick-arrow
+    position: absolute
+    bottom: 0
+    border: 2px solid $bl-dark
+    +t
+      background: $gray
+      border-color: $gray  
+    &:hover
+      border-color: rgba($bl-dark, .6) 
+      +t
+        border-color: $bl-dark
+        background: transparent  
+  .slick-prev
+    left: 0
+    +t
+      left: calc(50% - 56px) 
+  .slick-next
+    left: 64px
+    +t
+      left: auto
+      right: calc(50% - 56px) 
+
++dark
+  .review
+    &__container
+      background: $dark 
+      +t
+        background: none 
+    &__ava
+      background: $dark 
+    .slick-dots
+      li
+        button
+          border: 1px solid $dark
+        &.slick-active button
+          border-color: $green 
+          background: $dark 
+    .slick-arrow
+      border-color: #2C2C37
+      background: #2C2C37
+      +t
+        background: $dark
+        border-color: $dark  
+      .icon
+        fill: $wh
+      &:hover
+        border-color: $dark-wh 
+        +t
+          border-color: $wh 

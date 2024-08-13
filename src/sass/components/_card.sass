@@ -1,0 +1,338 @@
+.card
+  &__row
+    display: flex
+    padding-right: 6px
+    +x
+      padding: 0
+    +r(1279)
+      display: block
+      max-width: 680px
+      margin: 0 auto 
+    +t
+      max-width: 504px
+  &__col
+    &:first-child
+      flex: 0 0 calc(100% - 490px)
+      width: calc(100% - 490px)
+      padding-right: 72px
+      +x
+        padding-right: 56px
+      +r(1279)
+        width: 100%
+        margin-bottom: 64px
+        padding: 0 
+      +m
+        margin-bottom: 56px
+    &:nth-child(2)
+      flex: 0 0 490px
+      width: 490px
+      align-self: center
+      +r(1279)
+        width: 100%
+        text-align: center 
+  &__gallery
+    display: flex
+    align-items: flex-start
+    +t
+      flex-direction: column-reverse
+    +m
+      display: block
+      position: relative
+  &__container
+    flex: 0 0 152px
+    width: 152px
+    margin: -12px 0
+    +t
+      flex: 0 0 calc(100% + 24px)
+      width: calc(100%  + 24px)
+      margin: 0 -12px
+  &__slide
+    padding: 12px 0 
+    +t
+      padding: 0 12px 
+  &__preview
+    display: block
+    background: $gray 
+    font-size: 0
+  &__pic
+    max-width: 100% 
+    max-height: 100% 
+  &__slider
+    visibility: hidden
+    +m
+      padding-bottom: 88px
+    &.slick-initialized
+      visibility: visible
+  &__slider &__preview
+    border: 2px solid $gray
+    border-radius: 32px 
+    overflow: hidden 
+    cursor: pointer
+    transition: border-color .25s
+    +m
+      border-radius: 48px 
+    &:hover
+      border-color: rgba($bl, .1) 
+      +t
+        border-color: $gray 
+    &.active
+      border-color: $green 
+      +t
+        border-color: $green 
+      +m
+        border-color: $gray 
+  &__wrap
+    position: relative
+    flex-grow: 1
+    padding-left: 25px
+    +t
+      margin-bottom: 24px
+      padding: 0
+    +m
+      position: static
+      margin: 0
+  &__wrap &__preview
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 504px
+    border-radius: 64px 
+    +m
+      display: none
+  &__wrap &__pic
+    border-radius: 64px 
+  &__status
+    position: absolute
+    top: 40px
+    right: -40px
+    z-index: 5
+    min-width: 155px
+    padding: 0 24px 
+    text-align: center
+    border-radius: 32px 
+    background: $red 
+    border: 2px solid $wh
+    line-height: 52px
+    font-size: 20px
+    font-weight: 700
+    text-transform: uppercase
+    color: #F7FAFC
+    pointer-events: none
+    +d
+      top: 24px
+      right: -24px
+      min-width: 96px
+      padding: 0 14px
+      border-radius: 24px 
+      font-size: 14px
+      line-height: 36px
+    &_sale
+      background: $red
+    &_new
+      background: $green 
+  &__icon
+    position: absolute
+    right: 40px
+    bottom: 40px
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    background: $wh
+    font-size: 0
+    pointer-events: none
+    .icon
+      width: 24px
+      height: 24px
+      fill: $bl-dark
+    +m
+      display: none
+  .slick-arrow
+    position: absolute
+    top: calc(100% + 10px)
+    left: 0
+    z-index: 3
+    background: $gray
+    border: 2px solid $gray
+    +t
+      top: 50%
+      transform: translateY(-50%)
+    +m
+      position: absolute
+      top: auto
+      bottom: 0
+      transform: translateY(0)
+      margin: 0
+    &:hover
+      border-color: $bl-dark
+      background: transparent 
+  .slick-prev
+    left: 0
+    +t
+      left: -64px
+    +m
+      left: calc(50% - 56px) 
+  .slick-next
+    left: 64px
+    +t
+      left: auto
+      right: -64px
+    +m
+      right: calc(50% - 56px) 
+  &__title
+    margin-bottom: 32px
+  &__details
+    display: flex
+    align-items: center
+    margin-bottom: 32px
+    +r(1279)
+      justify-content: center
+  &__prices
+    display: flex
+    align-items: center
+    font-weight: 600 
+  &__old
+    margin-right: 16px
+    text-decoration: line-through
+    font-size: 20px
+    color: rgba($bl, .24) 
+    +m
+      margin-right: 8px
+      font-size: 16px
+  &__actual
+    font-size: 32px
+    +m
+      font-size: 24px
+  &__category
+    margin-right: 32px
+    padding: 0 32px
+    border-radius: 32px 
+    font-size: 20px
+    font-weight: 700  
+    line-height: 56px 
+    text-transform: uppercase
+    +m
+      margin-right: 24px
+      padding: 0 24px
+      border-radius: 24px
+      font-size: 16px
+      line-height: 48px  
+  &__code
+    margin-bottom: 48px
+    line-height: 2
+    font-weight: 500 
+    color: rgba($bl, .4) 
+    +m
+      margin-bottom: 40px
+  &__number
+    margin-left: 8px
+    color: $bl
+  &__control
+    display: flex
+    align-items: center
+    +r(1279)
+      justify-content: center
+    +m
+      flex-wrap: wrap
+      max-width: 230px
+      margin: 0 auto 
+  &__counter
+    margin-right: 24px
+    +m
+      margin: 0 0 24px 
+  &__btn
+    margin-right: 24px
+  &__favorite
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: 64px
+    height: 64px 
+    border: 2px solid $gray
+    border-radius: 50% 
+    font-size: 0
+    transition: border-color .25s 
+    +m
+      width: 48px
+      height: 48px
+    .icon
+      width: 32px
+      height: 32px
+      transition: fill .25s 
+      +m
+        width: 24px
+        height: 24px
+    .icon-heart-border
+      fill: $bl-dark
+    .icon-heart-fill
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      z-index: 2
+      fill: $red
+      opacity: 0
+    &:hover
+      border-color: $bl-dark 
+    &.active 
+      .icon-heart-border
+        opacity: 0
+      .icon-heart-fill
+        opacity: 1
+
+.zoomWindow
+  +x
+    background-color: $gray 
+    border-radius: 64px 
+
+.ZoomContainer,
+.zoomWindow
+  +x
+    z-index: 4 !important
+
++dark
+  .card
+    &__preview
+      background: $dark
+      border-color: $dark
+      &:hover
+        border-color: rgba($dark-wh, .1)
+        +m
+          border-color: $dark 
+      &.active
+        border-color: $green
+        +m
+          border-color: $dark 
+    &__status
+      border-color: $bg-dark
+    &__icon
+      background: #2C2C37
+      .icon
+        fill: $wh
+    &__old
+      color: rgba($dark-wh, .24)
+    &__code
+      color: rgba($dark-wh, .4)
+    &__number
+      color: $dark-wh 
+    &__favorite
+      border-color: $dark
+      &:hover
+        border-color: rgba($dark-wh, .1) 
+      .icon-heart-border
+        fill: $wh
+    .slick-arrow
+      background: $dark
+      border-color: $dark
+      .icon
+        fill: $wh
+      &:hover
+        border-color: $dark-wh 
+  .zoomWindow
+    +x
+      background-color: $dark
+

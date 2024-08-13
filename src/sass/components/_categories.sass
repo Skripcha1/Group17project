@@ -1,0 +1,96 @@
+.categories
+  margin-bottom: 144px
+  +t
+    overflow: hidden
+  &__stage
+    +m
+      text-align: center
+  &__title
+    +t
+      margin-bottom: 48px
+      padding-right: 130px
+      font-size: 32px
+      line-height: 1.5
+    +m
+      margin-bottom: 56px
+      padding: 0
+      text-align: center
+  &__container
+    margin: 0 -16px
+    +t
+      margin-right: -95px
+    +m
+      margin: 0 -4px 
+  &__slider
+    visibility: hidden
+    +m
+      padding-bottom: 88px
+    &.slick-initialized
+      visibility: visible
+  &__slide
+    padding: 0 16px 
+  &__item
+    display: block
+    padding: 28px 10px
+    border-radius: 24px
+    background: $gray  
+    text-align: center
+    transition: opacity .25s
+    &:hover
+      opacity: .8 
+  &__icon
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 32px
+    margin-bottom: 16px
+    font-size: 0
+  &__pic
+    max-width: 100%
+    max-height: 100%  
+  &__text
+    font-weight: 600
+    line-height: 1.5
+    color: $bl  
+  .slick-arrow
+    position: absolute
+    top: -125px
+    background: $gray
+    border: 2px solid $gray
+    +x
+      top: -117px
+    +t
+      top: -93px
+    +m
+      top: auto
+      bottom: 0
+    &:hover
+      border-color: $bl-dark
+      background: transparent  
+  .slick-prev
+    right: 79px
+    +t
+      right: 159px
+    +m
+      right: auto
+      left: calc(50% - 56px) 
+  .slick-next
+    right: 15px
+    +t
+      right: 95px
+    +m
+      right: calc(50% - 56px) 
+
++dark
+  .categories
+    &__item
+      background: $dark
+    &__text
+      color: $dark-wh  
+    .slick-arrow
+      background: $dark
+      border-color: $dark
+      .icon
+        fill: $wh
+      &:hover
+        border-color: $dark-wh 

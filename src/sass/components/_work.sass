@@ -1,0 +1,74 @@
+.work
+  &__row
+    display: flex
+    align-items: flex-start
+    +d
+      display: block
+  &__col
+    &:first-child
+      flex-shrink: 0
+      width: 440px 
+      padding: 54px 56px 
+      border-radius: 48px 
+      border: 2px solid $gray
+      +d
+        width: 100%
+        margin-bottom: 64px
+        padding: 0
+        border-radius: 0
+        border: none   
+      +m
+        margin-bottom: 56px
+    &:nth-child(2)
+      flex-grow: 1
+      padding-left: 96px
+      +x
+        padding-left: 64px
+      +d
+        padding-left: 0
+  .filters
+    margin-bottom: 0  
+    +x
+      margin-bottom: 0
+    +m
+      margin-bottom: 0
+  &__item
+    padding: 54px 56px 
+    border-radius: 48px 
+    border: 2px solid $gray
+    +t
+      border-radius: 40px
+    +m
+      padding: 24px 
+      border-radius: 32px  
+    +nl
+      margin-bottom: 48px
+      +m
+        margin-bottom: 40px
+  &__post
+    margin-bottom: 24px
+    font-size: 32px
+    line-height: 1.5
+    font-weight: 600 
+    +m
+      margin-bottom: 16px
+      font-size: 20px
+      line-height: 1.6
+  &__text
+    margin-bottom: 48px
+    font-size: 20px
+    line-height: 1.6
+    +m
+      margin-bottom: 40px
+      font-size: 16px
+      line-height: 2
+  &__item &__btn
+    min-width: auto
+
++dark
+  .work
+    &__col
+      &:first-child
+        border-color: $dark
+    &__item
+      border-color: $dark 

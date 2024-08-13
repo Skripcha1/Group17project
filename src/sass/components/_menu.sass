@@ -1,0 +1,270 @@
+.menu
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  padding: 170px 0 90px 
+  background: $wh
+  visibility: hidden
+  opacity: 0
+  transition: visible .25s, opacity .25s, transform .25s
+  +x
+    padding-top: 155px
+  +t
+    padding: 145px 0 80px
+  +m
+    padding: 110px 0 70px
+  +a
+    padding-top: 126px 
+  &__center
+    width: 100%
+    height: 100%  
+  &__search
+    display: none
+    +m
+      display: block
+      flex-shrink: 0 
+      margin-bottom: 24px
+  &__container
+    height: 100% 
+    overflow-y: auto
+    -webkit-overflow-scrolling: touch
+    +m
+      margin-bottom: 24px
+      overflow: visible
+      height: auto
+    &::-webkit-scrollbar
+      width: 5px
+    &::-webkit-scrollbar-track-piece
+      background-color: $gray
+      border-radius: 0
+    &::-webkit-scrollbar-thumb:vertical
+      width: 5px 
+      background-color: rgba($bl, .1)
+      border-radius: 0
+    &::-webkit-scrollbar-thumb:horizontal,
+    &::-webkit-scrollbar-thumb:window-inactive
+      background-color: rgba($bl, .1)
+      border-radius: 0
+  &__list
+    display: flex
+    flex-direction: column
+    align-items: center
+    transition: transform .25s
+    +m
+      flex-direction: row
+    +a
+      flex-direction: column
+  &__item
+    position: relative
+    font-size: 24px
+    line-height: 40px
+    color: $bl 
+    cursor: pointer
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    +m
+      position: static
+    &[href]
+      transition: color .25s 
+    &:hover
+      color: $green
+      +t
+        color: $bl  
+    &.active
+      font-weight: 500 
+      color: $green 
+    +nl
+      margin-bottom: 24px
+      +x
+        margin-bottom: 20px
+      +t
+        margin-bottom: 24px
+      +m
+        margin: 0 24px 0 0 
+      +a
+        margin: 0 0 16px
+  &__head
+    display: flex
+    align-items: center
+    transition: color .25s 
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    .icon
+      width: 16px
+      height: 16px
+      margin-left: 16px
+      transition: fill .25s 
+  &__item:hover &__head
+    .icon
+      fill: $green
+      +t
+        fill: $bl-dark
+  &__item.active &__head
+    color: $green 
+    .icon
+      fill: $green
+      +t
+        fill: $green
+  &__body
+    position: absolute
+    top: 0
+    left: calc(100% + 70px)
+    width: 0
+    overflow: hidden
+    transition: width .25s
+    +rmin(768)
+      visibility: visible
+      opacity: 1
+    +m
+      position: fixed
+      left: 0
+      right: 0
+      bottom: 0
+      width: 100%
+      padding: 56px 0 32px 
+      overflow: visible
+      background: $wh 
+      visibility: hidden
+      opacity: 0
+      transition: all .25s 
+    +a
+      padding-top: 106px
+  &__item.active &__body
+    width: 100% 
+    +m
+      visibility: visible
+      opacity: 1
+  &__group
+    display: flex
+    flex-direction: column
+    align-items: center
+    +m
+      height: 100% 
+      overflow-y: auto
+      -ms-overflow-style: none  // IE 10+
+      scrollbar-width: none  // Firefox
+      -webkit-overflow-scrolling: touch
+      &::-webkit-scrollbar
+        display: none
+  &__group &__link
+    white-space: nowrap
+    font-weight: 400 
+    color: $bl
+    transition: color .25s
+    &:hover
+      color: $green  
+    +nl
+      margin-bottom: 24px
+      +x
+        margin-bottom: 20px
+      +t
+        margin-bottom: 24px
+      +m
+        margin-bottom: 16px
+  &__btn.btn
+    display: none
+    +m
+      display: inline-flex
+      flex-shrink: 0 
+      margin: auto 0 40px
+  &__social
+    position: absolute
+    bottom: 48px
+    display: flex
+    align-items: center
+    +t
+      bottom: 36px
+    +m
+      left: 32px
+      bottom: 32px
+      z-index: 6
+  &__social &__link
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0 
+    width: 24px
+    height: 24px
+    font-size: 0
+    .icon
+      width: 24px
+      height: 24px
+      fill: $bl-dark
+      transition: fill .25s 
+    &:hover .icon
+      fill: rgba($bl, .75)
+    +nl
+      margin-right: 24px
+  &__back,
+  &__close
+    display: none
+    +m
+      display: inline-block
+      position: fixed
+      top: 32px
+      z-index: 20
+      width: 32px
+      width: 48px
+      height: 48px
+      border-radius: 50%
+      background: $gray 
+      .icon
+        fill: $bl-dark 
+  &__back
+    left: 32px
+    .icon
+      width: 16px
+      height: 16px
+  &__close
+    right: 32px
+    .icon
+      width: 20px
+      height: 20px
+  &.visible
+    visibility: visible
+    opacity: 1
+  &.left
+    +m
+      z-index: 10
+  &.left &__list
+    transform: translateX(-110px)
+    +m
+      transform: none
+
++dark
+  .menu
+    background: $bg-dark
+    &__item
+      color: $dark-wh
+      &:hover
+        color: $green 
+        +t
+          color: $wh 
+      &.active
+        color: $green
+      &.active .menu__head .icon
+        fill: $green
+    &__item:hover .menu__head .icon
+      +t
+        fill: $wh
+    &__head
+      .icon
+        fill: $wh
+    &__link
+      color: $dark-wh
+      &:hover
+        color: $green 
+    &__social .menu__link
+      .icon
+        fill: $wh
+      &:hover .icon
+        fill: rgba($wh, .75)
+    &__body
+      +m
+        background: $bg-dark
+    &__back,
+    &__close
+      +m
+        background: $dark
+        .icon
+          fill: $wh

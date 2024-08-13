@@ -1,0 +1,36 @@
+.social
+  display: flex
+  &__link
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    background: $gray
+    transition: background .25s 
+    +m
+      width: 24px
+      height: 24px
+      background: none 
+    .icon
+      width: 24px
+      height: 24px
+      fill: $bl-dark
+    &:hover
+      background: darken($gray, 3)
+    +nl
+      margin-right: 16px
+      +m
+        margin-right: 24px
+
++dark
+  .social
+    &__link
+      background: $dark
+      +m
+        background: none 
+      .icon
+        fill: $wh
+      &:hover
+        background: lighten($dark, 5)

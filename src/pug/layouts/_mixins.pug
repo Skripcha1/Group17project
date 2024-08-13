@@ -1,0 +1,93 @@
+mixin i(name)
+	svg.icon(class='icon-' + name)
+		use(xlink:href='#icon-' + name)
+
+mixin product(src, name, categoryClass, category, saleProduct, priceOld, newProduct)
+	.product
+		if saleProduct
+			.product__sale 20% OFF
+		if newProduct
+			.product__new NEW IN
+		.product__view
+			a.product__preview(href="product.html")
+				img.product__pic(src=src alt="")
+			a.product__btn.btn.btn_green(href="cart.html") Add to Cart
+		a.product__name(href="product.html")=name
+		.product__details
+			.product__category(class=categoryClass)=category
+			.product__price
+				if priceOld
+					span.product__old $30
+				span.product__actual $20
+
+mixin newsletter(classNewsletter)
+	.newsletter.section(class=classNewsletter)
+		.newsletter__center.center
+			.newsletter__container
+				.newsletter__stage.stage - Our Newsletter
+				h2.newsletter__title.title.title_mb-md Sign Up to our Newsletter
+				form.newsletter__form
+					.newsletter__field.field
+						.field__wrap
+							input.field__input(type="text" placeholder="Your Email")
+					.newsletter__btns
+						button.newsletter__btn.btn.btn_green.btn_wide(type="submit") Sign Up
+
+mixin switch(checked, classSwitch)
+	label.switch.js-theme(class=classSwitch)
+		if checked
+			input.switch__input(type="checkbox" checked)
+		else
+			input.switch__input(type="checkbox")
+		span.switch__in
+			span.switch__tick
+				img.switch__pic.switch__pic_moon(src="img/moon.svg" alt="")
+				img.switch__pic.switch__pic_sun(src="img/sun.svg" alt="")
+
+mixin review(category)
+	.review.section
+		.review__center.center
+			.review__container
+				.review__box
+					.review__stage.stage=category
+					h2.review__title.title What our Customers are Saying
+				.review__wrap
+					.review__slider.js-slider-review
+						.review__item
+							.review__ava
+								img.review__pic(src="img/ava-1.jpg" alt="")
+							.review__author Amy Smith
+							.review__text This is the best website I have ordered something from. I highly recommend.
+						.review__item
+							.review__ava
+								img.review__pic(src="img/ava-1.jpg" alt="")
+							.review__author Amy Smith
+							.review__text This is the best website I have ordered something from. I highly recommend. I highly recommend.
+						.review__item
+							.review__ava
+								img.review__pic(src="img/ava-1.jpg" alt="")
+							.review__author Amy Smith
+							.review__text This is the best website I have ordered something from. I highly recommend.
+
+mixin slider
+	.slider.section
+		.slider__center.center
+			.slider__stage.stage - Explore More
+			h2.slider__title.title.title_mb-lg Related Products
+			.slider__container
+				.slider__list.js-slider-products
+					.slider__slide
+						+product('img/products/product-pic-1.png', 'Damaged Repair', 'yellow', 'Sun Care', true, true)
+					.slider__slide
+						+product('img/products/product-pic-3.png', 'Acne Skin Gel', 'pink', 'Treatments')
+					.slider__slide
+						+product('img/products/product-pic-2.png', 'Night Eye Cream', 'blue', 'EYE CARE', true, true)
+					.slider__slide
+						+product('img/products/product-pic-4.png', 'Dry Skin Rescue', 'green', 'Moisturizers')
+					.slider__slide
+						+product('img/products/product-pic-5.png', 'Damaged Repair', 'yellow', 'Sun Care')
+					.slider__slide
+						+product('img/products/product-pic-6.png', 'All In One Gel', 'blue', 'FEATURED')
+
+
+

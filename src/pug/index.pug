@@ -1,0 +1,162 @@
+---
+title: Hygge
+classHome: active
+---
+extends layouts/_layout
+block content
+	.main.section
+		.main__center.center
+			.main__container
+				.main__details
+					.main__stage.stage - Skincare Products
+					h1.main__title.title We Offer the Best Products for your Skin
+					a.main__btn.btn.btn_green(href="#") Shop Now
+				.main__preview
+					img.main__pic(src="img/main-pic.png" alt="")
+	.categories.section
+		.categories__center.center
+			.categories__stage.stage - The Categories
+			h2.categories__title.title.title_mb-lg Browse by Category
+			.categories__container
+				.categories__slider.js-slider-categories
+					.categories__slide
+						a.categories__item(href="category.html")
+							.categories__icon
+								img.categories__pic(src="img/categories/shopping-bag.svg" alt="")
+							.categories__text On Sale
+					.categories__slide
+						a.categories__item(href="category.html")
+							.categories__icon
+								img.categories__pic(src="img/categories/trending.svg" alt="")
+							.categories__text Featured
+					.categories__slide
+						a.categories__item(href="category.html")
+							.categories__icon
+								img.categories__pic(src="img/categories/skincare.svg" alt="")
+							.categories__text Masks
+					.categories__slide
+						a.categories__item(href="category.html")
+							.categories__icon
+								img.categories__pic(src="img/categories/eye-care.svg" alt="")
+							.categories__text Eye Care
+					.categories__slide
+						a.categories__item(href="category.html")
+							.categories__icon
+								img.categories__pic(src="img/categories/natural.svg" alt="")
+							.categories__text Moisturizers
+					.categories__slide
+						a.categories__item(href="category.html")
+							.categories__icon
+								img.categories__pic(src="img/categories/protection.svg" alt="")
+							.categories__text Treatments
+					.categories__slide
+						a.categories__item(href="category.html")
+							.categories__icon
+								img.categories__pic(src="img/categories/night-care.svg" alt="")
+							.categories__text Night Care
+					.categories__slide
+						a.categories__item(href="category.html")
+							.categories__icon
+								img.categories__pic(src="img/categories/after-sun.svg" alt="")
+							.categories__text Sun Care
+					.categories__slide
+						a.categories__item(href="category.html")
+							.categories__icon
+								img.categories__pic(src="img/categories/shopping-bag.svg" alt="")
+							.categories__text On Sale
+					.categories__slide
+						a.categories__item(href="category.html")
+							.categories__icon
+								img.categories__pic(src="img/categories/trending.svg" alt="")
+							.categories__text Featured
+					.categories__slide
+						a.categories__item(href="category.html")
+							.categories__icon
+								img.categories__pic(src="img/categories/skincare.svg" alt="")
+							.categories__text Masks
+	.products.products_main.section
+		.products__center.center
+			.products__stage.stage - Our Products 
+			h2.products__title.title.title_mb-lg Explore out Products
+			.products__list
+				+product('img/products/product-pic-1.png', 'Sun Cream', 'yellow', 'Sun Care', true, true)
+				+product('img/products/product-pic-2.png', 'Night Eye Cream', 'blue', 'EYE CARE', true, true)
+				+product('img/products/product-pic-3.png', 'Acne Skin Gel', 'pink', 'Treatments')
+				+product('img/products/product-pic-4.png', 'Anti Dry Skin', 'green', 'Moisturizers')
+				+product('img/products/product-pic-5.png', 'Body Protection', 'yellow', 'Treatments', '', '', true)
+				+product('img/products/product-pic-6.png', 'All In One Gel', 'blue', 'FEATURED')
+				+product('img/products/product-pic-7.png', 'Deep Treatment', 'pink', 'ON SALE', true, true)
+				+product('img/products/product-pic-8.png', 'Morning Shine', 'green', 'NIGHT CARE')
+			.products__btns
+				a.products__btn.btn.btn_green(href="category.html") View All
+	.about.section
+		.about__center.center
+			.about__stage.stage - Why Us
+			h2.about__title.title.title_mb-lg Why People Choose Us
+			.about__list
+				.about__item
+					.about__icon
+						svg(xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="#000" stroke-width="2.5" stroke-linejoin="round")
+							path(d="M29 21.52V10.365a2.8 2.8 0 0 0-.373-1.393c-.244-.423-.594-.775-1.016-1.02L17.89 2.374a2.77 2.77 0 0 0-2.778 0L5.39 7.952c-.422.245-.772.596-1.016 1.02A2.8 2.8 0 0 0 4 10.365V21.52a2.8 2.8 0 0 0 .373 1.393c.244.423.594.775 1.016 1.02l9.722 5.578a2.77 2.77 0 0 0 2.778 0l9.722-5.578a2.78 2.78 0 0 0 1.016-1.02A2.8 2.8 0 0 0 29 21.521z")
+							path(d="M4.375 8.914L16.5 15.957l12.125-7.043M16.5 30V15.943" stroke-linecap="round")
+					.about__category Easy Returns
+					.about__text Our return policy is simple and that is why customers love our shop.
+				.about__item
+					.about__icon
+						svg(xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="#000" stroke-width="2.5" stroke-linejoin="round")
+							path(d="M28 30v-3a6 6 0 0 0-6-6H10a6 6 0 0 0-6 6v3" stroke-linecap="round")
+							path(d="M16 14a6 6 0 1 0 0-12 6 6 0 1 0 0 12z")
+					.about__category Customer Service
+					.about__text We offer amazing customer service no matter what happens.
+				.about__item
+					.about__icon
+						svg(xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none")
+							path(d="M16 3l4.326 8.557L30 12.938l-7 6.657L24.652 29 16 24.557 7.348 29 9 19.595l-7-6.657 9.674-1.38L16 3z" stroke="#000" stroke-width="2.5" stroke-linejoin="round")
+					.about__category High Quality
+					.about__text All of our products go through very strict inspection before we dispatch them.
+	+review('- Our Reviews')
+	.blog.section
+		.blog__center.center
+			.blog__stage.stage - Our Blog
+			h2.blog__title.title.title_mb-lg Check Out our Blog
+			.blog__list.js-slider-blog
+				a.blog__item.blog__item_w66(href="#")
+					.blog__status.blog__status_recent recent
+					.blog__preview(style="background-image: url('img/blog-pic-1.jpg');")
+					h3.blog__info Morning Skincare Routine: 10 Top Tips for you
+					.blog__category.yellow TOP TIPS
+				a.blog__item.blog__item_w33(href="#")
+					.blog__preview(style="background-image: url('img/blog-pic-2.jpg');")
+					h3.blog__info New Collection is Out
+					.blog__category.blue NEW IN
+				a.blog__item.blog__item_w33(href="#")
+					.blog__status.blog__status_popular popular
+					.blog__preview(style="background-image: url('img/blog-pic-3.jpg');")
+					h3.blog__info Always Stay Fresh
+					.blog__category.pink HOW TO
+				a.blog__item.blog__item_w33(href="#")
+					.blog__preview(style="background-image: url('img/blog-pic-4.jpg');")
+					h3.blog__info Improve your Skin now
+					.blog__category.green Masks
+				a.blog__item.blog__item_w33(href="#")
+					.blog__preview(style="background-image: url('img/blog-pic-5.jpg');")
+					h3.blog__info Stay Safe in the Sun
+					.blog__category.yellow Sun Care
+				a.blog__item.blog__item_w50(href="#")
+					.blog__preview(style="background-image: url('img/blog-pic-6.jpg');")
+					h3.blog__info Explore our Bestselling Products
+					.blog__category.blue BESTSELLERS
+				a.blog__item.blog__item_w50(href="#")
+					.blog__preview(style="background-image: url('img/blog-pic-7.jpg');")
+					h3.blog__info 5 Great Tips to Get that Perfect Skin
+					.blog__category.pink TOP TIPS
+			.blog__btns
+				button.blog__btn.btn.btn_green View All
+	+newsletter('newsletter_desktop')
+
+
+					
+
+
+
+

@@ -1,0 +1,95 @@
+.product
+  position: relative
+  color: $bl 
+  &__view
+    position: relative
+    margin-bottom: 32px
+  &__preview
+    display: block
+    position: relative
+    padding-bottom: 100%
+    border-radius: 48px 
+    overflow: hidden
+    background: $gray 
+    font-size: 0
+  &__pic
+    +coverdiv
+    object-fit: cover
+  &__btn
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    min-width: 145px
+    height: 48px
+    padding: 0 24px
+    visibility: hidden
+    opacity: 0  
+    font-size: 16px
+    +t
+      display: none
+  &:hover &__btn
+    visibility: visible
+    opacity: 1
+  &__sale,
+  &__new
+    position: absolute
+    top: 24px
+    right: -24px
+    z-index: 2
+    min-width: 96px
+    padding: 0 14px 
+    text-align: center
+    border-radius: 24px 
+    background: $red 
+    border: 2px solid $wh
+    line-height: 36px
+    white-space: nowrap
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    color: #F7FAFC 
+  &__sale
+    background: $red
+  &__new
+    background: $green 
+  &__name
+    display: block
+    margin-bottom: 16px
+    font-size: 24px
+    font-weight: 600
+    line-height: (40/24) 
+    color: $bl 
+  &__details
+    display: flex
+    align-items: center
+  &__category
+    margin-right: 24px
+    padding: 0 16px
+    border-radius: 24px 
+    line-height: 40px
+    font-size: 14px
+    font-weight: 700   
+    text-transform: uppercase
+  &__price
+    font-weight: 600 
+  &__old
+    margin-right: 8px
+    text-decoration: line-through
+    color: rgba($bl, .24)
+  &__actual
+    font-size: 20px
+        
++dark
+  .product
+    color: $dark-wh 
+    &__preview  
+      background: $dark 
+    &__name
+      color: $dark-wh 
+    &__sale,
+    &__new
+      border-color: $bg-dark 
+    &__old
+      color: rgba($dark-wh, .24) 
+  

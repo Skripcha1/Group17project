@@ -1,0 +1,186 @@
+---
+title: Hygge
+---
+extends layouts/_layout
+block content
+	.breadcrumbs
+		.breadcrumbs__center.center
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="index.html") Home Page
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="category.html") Categories
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="cart.html") Shopping Cart
+				li.breadcrumbs__item Checkout
+	.checkout.section.js-checkout
+		.checkout__center.center
+			.checkout__stage.stage - Almost There
+			h2.checkout__title.title.title_mb-lg Checkout
+			.checkout__row
+				.checkout__col
+					.checkout__steps
+						.checkout__step.js-checkout-step.active 1
+						.checkout__step.js-checkout-step 2
+						.checkout__step.js-checkout-step 3
+						.checkout__step.js-checkout-step 4
+					.checkout__container
+						.checkout__item.js-checkout-item
+							.checkout__category Details
+							.checkout__fieldset
+								.checkout__field.field
+									.field__label Email Address
+									.field__wrap
+										input.field__input(type="email" name="email")
+								.checkout__field.field
+									.field__label Password
+									.field__wrap
+										input.field__input(type="password" name="password")
+							button.checkout__btn.btn.btn_green.btn_wide.js-checkout-btn Continue
+							button.checkout__btn.btn.btn_border.btn_wide.js-checkout-btn Guest Checkout
+						.checkout__item.js-checkout-item
+							.checkout__category Shipping Details
+							.checkout__fieldset
+								.checkout__field.field
+									.field__label Full Name
+									.field__wrap
+										input.field__input(type="text" name="name")
+								.checkout__field.field
+									.field__label Street Name
+									.field__wrap
+										input.field__input(type="text" name="street")
+								.checkout__line
+									.checkout__cell
+										.checkout__field.field
+											.field__label House Number
+											.field__wrap
+												input.field__input(type="text" name="house")
+									.checkout__cell
+										.checkout__field.field
+											.field__label City
+											.field__wrap
+												input.field__input(type="text" name="city")
+								.checkout__line
+									.checkout__cell
+										.checkout__field.field
+											.field__label Country
+											.field__wrap
+												input.field__input(type="text" name="country")
+									.checkout__cell
+										.checkout__field.field
+											.field__label ZIP Code
+											.field__wrap
+												input.field__input(type="text" name="code")
+							button.checkout__btn.btn.btn_green.btn_wide.js-checkout-btn Continue
+						.checkout__item.js-checkout-item
+							.checkout__category Billing Details
+							.checkout__fieldset
+								label.checkout__checkbox.checkbox
+									input.checkbox__input.js-checkout-checkbox(type="checkbox" checked)
+									span.checkbox__in
+										span.checkbox__tick
+										span.checkbox__text Same as shipping address
+								.checkout__box.js-checkout-box
+									.checkout__field.field
+										.field__label Full Name
+										.field__wrap
+											input.field__input(type="text" name="name")
+									.checkout__field.field
+										.field__label Street Name
+										.field__wrap
+											input.field__input(type="text" name="street")
+									.checkout__line
+										.checkout__cell
+											.checkout__field.field
+												.field__label House Number
+												.field__wrap
+													input.field__input(type="text" name="house")
+										.checkout__cell
+											.checkout__field.field
+												.field__label City
+												.field__wrap
+													input.field__input(type="text" name="city")
+									.checkout__line
+										.checkout__cell
+											.checkout__field.field
+												.field__label Country
+												.field__wrap
+													input.field__input(type="text" name="country")
+										.checkout__cell
+											.checkout__field.field
+												.field__label ZIP Code
+												.field__wrap
+													input.field__input(type="text" name="code")
+							button.checkout__btn.btn.btn_green.btn_wide.js-checkout-btn Continue
+						.checkout__item.js-checkout-item
+							.checkout__category Payment Details
+							.checkout__variants
+								label.checkout__checkbox.checkbox.js-checkout-payment
+									input.checkbox__input.js-checkout-radio(type="radio" name="payment" checked)
+									span.checkbox__in
+										span.checkbox__tick
+										span.checkbox__text Credit Card
+								label.checkout__checkbox.checkbox.js-checkout-payment
+									input.checkbox__input.js-checkout-radio(type="radio" name="payment")
+									span.checkbox__in
+										span.checkbox__tick
+										span.checkbox__text PayPal
+							.checkout__group
+								.checkout__el.js-checkout-el
+									.checkout__fieldset
+										.checkout__field.field
+											.field__label Card Number
+											.field__wrap
+												input.field__input(type="tel" name="card")
+										.checkout__line
+											.checkout__cell
+												.checkout__field.field
+													.field__label Expiry Date
+													.field__wrap
+														input.field__input(type="text" name="date")
+											.checkout__cell
+												.checkout__field.field
+													.field__label CVV
+													.field__wrap
+														input.field__input(type="tel" name="cvv")
+										.checkout__line
+											.checkout__cell
+												.checkout__field.field
+													.field__label Country
+													.field__wrap
+														input.field__input(type="text" name="country")
+											.checkout__cell
+												.checkout__field.field
+													.field__label ZIP Code
+													.field__wrap
+														input.field__input(type="text" name="code")
+									button.checkout__btn.btn.btn_green.btn_wide Place Order
+								.checkout__el.js-checkout-el
+									button.checkout__btn.btn.btn_green.btn_wide Continue with PayPal
+				.checkout__col
+					.basket.basket_checkout
+						.basket__category My Cart
+						.basket__list
+							.basket__item
+								a.basket__preview(href="#")
+									img.basket__pic(src="img/products/product-pic-4.png" alt="")
+								.basket__details
+									a.basket__product(href="#") Eye Mask Gel
+									.basket__price
+										.basket__old $127
+										.basket__actual $180
+								button.basket__remove
+									+i('close')
+							.basket__item
+								a.basket__preview(href="#")
+									img.basket__pic(src="img/products/product-pic-6.png" alt="")
+								.basket__details
+									a.basket__product(href="#") Day Eye Cream
+									.basket__price
+										.basket__actual $97
+								button.basket__remove
+									+i('close')
+						.basket__total
+							.basket__text Total:
+							.basket__text $224
+						a.basket__button.btn.btn_border.btn_wide(href="cart.html") Edit Cart

@@ -1,0 +1,125 @@
+.footer
+  padding-bottom: 72px
+  +x
+    padding-bottom: 64px
+  +m
+    padding-bottom: 56px
+  &__center
+    max-width: 1244px
+  &__row
+    display: flex
+    padding-right: 15px
+    +x
+      padding: 0
+    +t
+      flex-wrap: wrap
+      margin-top: -64px
+      padding-right: 30px
+    +m
+      margin-top: -56px
+      padding: 0
+  &__col
+    +t
+      flex: 0 0 50%
+      width: 50%
+      margin-top: 64px
+      padding-right: 32px
+    +m
+      margin-top: 58px
+      padding-right: 24px
+    +a
+      width: auto
+      flex: 0 0 auto
+      padding: 0
+    +nl
+      margin-right: auto
+      +t
+        margin-right: 0
+    &:nth-child(2n+1)
+      +a
+        margin-right: auto
+        padding-right: 20px
+    &:nth-child(2n)
+      +a
+        width: 130px 
+  &__logo
+    display: inline-block
+    margin-bottom: 25px
+    font-size: 0
+    +m
+      margin-bottom: 15px
+  &__logo &__pic
+    width: 117px
+    +m
+      width: 74px
+      margin-top: -2px
+    &_white-desktop,
+    &_black-desktop
+      +m
+        display: none
+    &_white-desktop
+      display: none
+    &_white-mobile,
+    &_black-mobile
+      display: none
+    &_black-mobile
+      +m
+        display: inline-block
+  &__copyright
+    margin-bottom: 32px
+    line-height: 1.5
+    +t
+      margin-bottom: 24px
+    +m
+      margin-bottom: 24px
+      font-size: 14px
+      line-height: (24/14) 
+    +a
+      max-width: 135px
+  &__social
+    margin-bottom: 48px
+  &__category
+    margin-bottom: 26px
+    font-size: 24px
+    line-height: (32/24) 
+    font-weight: 700 
+    +m
+      margin-bottom: 16px
+      font-size: 20px
+      line-height: 1.6
+  &__menu
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+  &__link
+    line-height: 1.5
+    color: $bl
+    transition: color .25s
+    +m
+      font-size: 14px
+    &:hover
+      color: rgba($bl, .75) 
+    +nl
+      margin-bottom: 16px
+      +m
+        margin-bottom: 19px
+  
++dark
+  .footer
+    &__logo
+      .footer__pic_black-desktop
+        display: none
+      .footer__pic_white-desktop
+        display: inline-block
+        +m
+          display: none
+      .footer__pic_black-mobile
+        +m
+          display: none
+      .footer__pic_white-mobile
+        +m
+          display: inline-block
+    &__link
+      color: $dark-wh
+      &:hover
+        color: rgba($dark-wh, .75) 

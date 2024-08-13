@@ -1,0 +1,57 @@
+.newsletter
+  &__container
+    padding: 96px 48px 
+    border-radius: 56px 
+    background: $gray 
+    +d
+      padding: 64px 48px
+    +t
+      padding: 0 
+      border-radius: 0
+      background: none  
+  &__stage
+    text-align: center
+  &__title
+    text-align: center
+    +t
+      font-size: 32px
+      line-height: 1.5
+  &__form
+    display: flex
+    width: 100% 
+    max-width: 635px
+    margin: 0 auto
+    +a
+      display: block
+  &__field
+    flex-grow: 1
+    +a
+      margin-bottom: 24px
+  .field__input
+    border-color: transparent 
+    font-weight: 400 
+    +t
+      background: $gray 
+  &__btns
+    flex-shrink: 0
+    width: 186px
+    padding-left: 24px
+    +a
+      width: 114px
+      padding: 0
+  &_desktop
+    +m
+      display: none
+      
++dark
+  .newsletter
+    &__container
+      background: $dark
+      +t
+        background: none 
+    .field__input
+      background: #2C2C37
+      border-color: #2C2C37
+      color: $dark-wh
+      +placeholder
+        color: rgba($dark-wh, .64) 

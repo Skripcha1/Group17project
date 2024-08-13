@@ -1,0 +1,88 @@
+header.header.js-header
+	.header__center.center
+		button.header__burger.js-header-burger
+		a.header__logo(href="index.html")
+			img.header__pic.header__pic_black-desktop(src="img/logo.svg" alt="")
+			img.header__pic.header__pic_white-desktop(src="img/logo-white.svg" alt="")
+			img.header__pic.header__pic_black-mobile(src="img/logo-mobile.svg" alt="")
+			img.header__pic.header__pic_white-mobile(src="img/logo-mobile-white.svg" alt="")
+		.header__control
+			.header__item.header__item_hidden
+				.header__search.search.js-search
+					.search__wrap
+						input.search__input(type="text" placeholder="Eye care products for tired eyes")
+					button.search__btn.js-search-btn
+						+i('search')
+			.header__item
+				a.header__link.header__link_cart.active(href="cart.html")
+					+i('cart')
+				.header__body
+					.basket.basket_header
+						.basket__list
+							.basket__item
+								a.basket__preview(href="#")
+									img.basket__pic(src="img/products/product-pic-4.png" alt="")
+								.basket__details
+									a.basket__product(href="#") Eye Mask Gel
+									.basket__price
+										.basket__old $127
+										.basket__actual $180
+								button.basket__remove
+									+i('close')
+							.basket__item
+								a.basket__preview(href="#")
+									img.basket__pic(src="img/products/product-pic-6.png" alt="")
+								.basket__details
+									a.basket__product(href="#") Day Eye Cream
+									.basket__price
+										.basket__actual $97
+								button.basket__remove
+									+i('close')
+						.basket__total
+							.basket__text Total:
+							.basket__text $201
+						.basket__btns
+							a.basket__btn.btn.btn_green(href="checkout.html") Checkout 
+							a.basket__btn.btn.btn_border(href="cart.html") Edit Cart
+			.header__item.header__item_hidden
+				a.header__link(href="login.html")
+					+i('user')
+	.header__menu.menu.js-menu
+		.menu__center.center
+			form.menu__search.search
+				.search__wrap
+					input.search__input(type="text" placeholder="Search")
+				button.search__btn
+					+i('search')
+			.menu__container
+				.menu__list.js-menu-list
+					a.menu__item(href="index.html" class=classHome) Home
+					.menu__item.js-menu-item
+						.menu__head.js-menu-head Categories
+							+i('arrow-next')
+						.menu__body.js-menu-body
+							button.menu__close.js-menu-close
+								+i('close')
+							button.menu__back.js-menu-back
+								+i('arrow-prev')
+							.menu__group
+								a.menu__link(href="category.html") On Sale
+								a.menu__link(href="category.html") Featured
+								a.menu__link(href="category.html") Masks
+								a.menu__link(href="category.html") Eye Care
+								a.menu__link(href="category.html") Moisturizers
+								a.menu__link(href="category.html") Treatments
+								a.menu__link(href="category.html") Night Care
+								a.menu__link(href="category.html") Sun Care
+					a.menu__item(href="#") Blog
+					a.menu__item(href="about-us.html" class=classAbout) About
+					a.menu__item(href="contacts.html" class=classContact) Contact
+			a.menu__btn.btn.btn_green.btn_wide(href="login.html") Login
+			.menu__social
+				a.menu__link(href="https://www.instagram.com/ui8net/" target="_blank")
+					+i('instagram')
+				a.menu__link(href="https://twitter.com/ui8" target="_blank")
+					+i('twitter')
+				a.menu__link(href="https://www.facebook.com/ui8.net/" target="_blank")
+					+i('facebook')
+

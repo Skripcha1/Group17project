@@ -1,0 +1,92 @@
+.contacts
+  &__details
+    +nl
+      margin-bottom: 144px
+      +x
+        margin-bottom: 112px
+      +m
+        margin-bottom: 104px
+  &__details &__title
+    margin-bottom: 144px
+    +x
+      margin-bottom: 112px
+    +m
+      margin-bottom: 104px
+  &__list
+    display: flex
+    flex-wrap: wrap
+    margin: -72px -48px 0
+    +d
+      display: block
+      margin: 0
+  &__item
+    flex: 0 0 calc(50% - 96px)
+    width: calc(50% - 96px)
+    margin: 72px 48px 0
+    +d
+      width: 100%
+      margin: 0
+    +nl
+      +d
+        margin-bottom: 64px
+      +m
+        margin-bottom: 56px
+  &__category
+    margin-bottom: 16px
+    font-size: 24px
+    font-weight: 600
+    line-height: (40/24) 
+  &__text
+    font-size: 18px
+    line-height: (32/18) 
+  &__link
+    text-decoration: underline
+    font-weight: 600
+    color: $bl
+    &:hover
+      text-decoration: none
+  &__container &__center
+    max-width: 1176px
+  &__row
+    display: flex
+    margin: 0 -48px
+    +d
+      display: block
+      margin: 0
+  &__wrap,
+  &__form
+    flex: 0 0 calc(50% - 96px)
+    width: calc(50% - 96px)
+    margin: 0 48px 
+    +d
+      width: 100%
+      margin: 0 
+  &__wrap
+    +d
+      max-width: 440px
+      margin-bottom: 64px
+    +t
+      max-width: 400px
+    +m
+      margin-bottom: 56px
+  &__wrap &__title
+    +t
+      font-size: 32px
+      line-height: 1.5
+  &__form
+    padding-top: 40px
+    +d
+      padding: 0
+  &__field
+    +nl
+      margin-bottom: 48px
+      +m
+        margin-bottom: 40px
+  &__btn
+    min-width: auto
+
++dark
+  .contacts
+    &__link
+      color: $dark-wh 
+  

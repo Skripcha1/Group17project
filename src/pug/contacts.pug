@@ -1,0 +1,62 @@
+---
+title: Hygge
+classContact: active
+---
+extends layouts/_layout
+block content
+	.breadcrumbs
+		.breadcrumbs__center.center
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="index.html") Home Page
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="category.html") Categories
+				li.breadcrumbs__item Contact Us
+	.contacts.section
+		.contacts__details
+			.contacts__center.center
+				.contacts__stage.stage - Ask Questions
+				h2.contacts__title.title We are always here to <br>help you
+				.contacts__list
+					.contacts__item
+						.contacts__category Customer Services
+						.contacts__text Please send us an email at <a class="contacts__link" href="mailto:customercare@hygge.com">customercare@hygge.com</a>
+					.contacts__item
+						.contacts__category Public Relations
+						.contacts__text You can contact our media team by sending them an email at <a class="contacts__link" href="mailto:media@hygge.com">media@hygge.com</a>
+					.contacts__item
+						.contacts__category Large Orders
+						.contacts__text If you are thinking of making a very large order, plese feel free to contact us at <a class="contacts__link" href="mailto:sales@hygge.com">sales@hygge.com</a> and we will give you a special discount
+					.contacts__item
+						.contacts__category Other Enquiries
+						.contacts__text For all of your other questions, please send us an email at <a class="contacts__link" href="mailto:general@hygge.com">general@hygge.com</a>
+		.contacts__container
+			.contacts__center.center
+				.contacts__row
+					.contacts__wrap
+						.contacts__stage.stage - Reach Out to Us
+						h2.contacts__title.title Please fill out the contact form
+					form.contacts__form
+						.contacts__field.field
+							.field__label Full Name
+							.field__wrap
+								input.field__input(type="text" name="name")
+						.contacts__field.field
+							.field__label Email Address
+							.field__wrap
+								input.field__input(type="text" name="address")
+						.contacts__field.field
+							.field__label Subject
+							.field__wrap
+								select.field__select.wide(name="subject")
+									option Choose Subject
+									option Subject 1
+									option Subject 2
+						.contacts__field.field.field_textarea
+							.field__label Message
+							.field__wrap
+								textarea.field__textarea(name="message")
+						button.contacts__btn.btn.btn_green(type="submit") Send
+	+newsletter
+
+

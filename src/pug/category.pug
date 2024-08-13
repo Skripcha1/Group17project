@@ -1,0 +1,69 @@
+---
+title: Hygge
+---
+extends layouts/_layout
+block content
+	.breadcrumbs
+		.breadcrumbs__center.center
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="index.html") Home Page
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="#") Navigation
+				li.breadcrumbs__item Eye Care
+	.products.products_full.section
+		.products__center.center
+			.products__stage.stage - Eye Care Products
+			h2.products__title.title.title_mb-lg Explore the Eye Care <br>Products
+			.filters.js-filters
+				.filters__sorting
+					.filters__open.js-filters-open Filter By
+					.filters__wrap.js-filters-wrap
+						.filters__drop.drop.js-drop
+							.drop__head.js-drop-head Color
+							.drop__body.js-drop-body
+								a.drop__link.js-drop-link(href="#") Red
+								a.drop__link.js-drop-link(href="#") Blue
+								a.drop__link.js-drop-link(href="#") Green
+								a.drop__link.js-drop-link(href="#") Black
+						.filters__drop.drop.js-drop
+							.drop__head.js-drop-head Category
+							.drop__body.js-drop-body
+								a.drop__link.js-drop-link(href="#") Treatments
+								a.drop__link.js-drop-link(href="#") Moisturizers
+								a.drop__link.js-drop-link(href="#") Featured
+						.filters__drop.drop.js-drop
+							.drop__head.js-drop-head Price Range
+							.drop__body.js-drop-body
+								a.drop__link.js-drop-link(href="#") $0 - $10
+								a.drop__link.js-drop-link(href="#") $10 - $50
+								a.drop__link.js-drop-link(href="#") $50 +
+					.filters__field.field
+						.field__wrap
+							select.field__select
+								option Sort By
+								option Sort By
+								option Sort By
+				.filters__tags
+					.filters__tag $0 - $10
+						button.filters__remove
+					.filters__tag Skincare
+						button.filters__remove
+					.filters__tag Green
+						button.filters__remove
+			.products__list
+				+product('img/products/product-pic-1.png', 'Sun Cream', 'yellow', 'Sun Care', true, true)
+				+product('img/products/product-pic-2.png', 'Night Eye Cream', 'blue', 'EYE CARE', true, true)
+				+product('img/products/product-pic-3.png', 'Acne Skin Gel', 'pink', 'Treatments')
+				+product('img/products/product-pic-4.png', 'Anti Dry Skin', 'green', 'Moisturizers')
+				+product('img/products/product-pic-5.png', 'Body Protection', 'yellow', 'Treatments', '', '', true)
+				+product('img/products/product-pic-6.png', 'All In One Gel', 'blue', 'FEATURED')
+				+product('img/products/product-pic-7.png', 'Deep Treatment', 'pink', 'ON SALE', true, true)
+				+product('img/products/product-pic-8.png', 'Morning Shine', 'green', 'NIGHT CARE')
+				+product('img/products/product-pic-3.png', 'Acne Skin Gel', 'pink', 'Treatments')
+				+product('img/products/product-pic-4.png', 'Anti Dry Skin', 'green', 'Moisturizers')
+				+product('img/products/product-pic-5.png', 'Body Protection', 'yellow', 'Treatments', '', '', true)
+				+product('img/products/product-pic-6.png', 'All In One Gel', 'blue', 'FEATURED')
+	+newsletter
+
+

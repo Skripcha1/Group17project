@@ -1,0 +1,67 @@
+---
+title: Hygge
+---
+extends layouts/_layout
+block content
+	.breadcrumbs
+		.breadcrumbs__center.center
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="index.html") Home Page
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="#") Navigation
+				li.breadcrumbs__item Careers
+	.work.section
+		.work__center.center
+			.work__stage.stage - Join our Team
+			h2.work__title.title.title_mb-lg Explore the Careers
+			.work__row
+				.work__col
+					.filters.filters_work.js-filters
+						.filters__open.js-filters-open Filter By
+						.filters__box.js-filters-wrap
+							.filters__form
+								.filters__title Filter By
+								.filters__fieldset
+									.filters__field.field
+										.field__label Job Title
+										.field__wrap
+											input.field__input(type="email" name="job")
+									.filters__field.field
+										.field__label Location
+										.field__wrap
+											select.field__select.wide(name="location")
+												option Select Location
+												option USA
+												option Canada
+									.filters__field.field
+										.field__label Department
+										.field__wrap
+											select.field__select.wide(name="department")
+												option Sales & Marketing
+												option Sort By
+												option Sort By
+								.filters__btns
+									button.filters__btn.btn.btn_green.btn_wide Apply Filters
+									button.filters__btn.btn.btn_border.btn_wide Clear All
+				.work__col
+					.work__item
+						.work__post Sr. Sales Manager
+						.work__text Sales & Marketing  -  San&nbsp;Francisco, California  -  $125k+
+						button.work__btn.btn.btn_green Apply
+					.work__item
+						.work__post Junior Marketing Designer 
+						.work__text Sales & Marketing  -  Los Angeles, California  -  $55k+
+						button.work__btn.btn.btn_green Apply
+					.work__item
+						.work__post Digital Marketing Consultant
+						.work__text Sales & Marketing  -  Remote (US)  -  $85k+
+						button.work__btn.btn.btn_green Apply
+					.work__item
+						.work__post Marketing Manager (Sales)
+						.work__text Sales & Marketing  -  New York City, New York  -  $75k+
+						button.work__btn.btn.btn_green Apply
+					.work__item
+						.work__post Sr. Marketing Designer
+						.work__text Sales & Marketing  -  San&nbsp;Francisco, California  -  $150k+
+						button.work__btn.btn.btn_green Apply

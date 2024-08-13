@@ -1,0 +1,65 @@
+.slider
+  &__title
+    +t
+      font-size: 32px
+      line-height: 1.5
+  &__container
+    margin: 0 -24px
+    +x
+      margin: 0 -28px 
+    +t
+      margin: 0 -24px 
+  &__list
+    visibility: hidden
+    +m
+      padding-bottom: 88px
+    &.slick-initialized
+      visibility: visible
+  &__slide
+    padding: 0 24px
+    +d
+      padding: 0 28px 
+    +t
+      padding: 0 24px 
+  .slick-arrow
+    position: absolute
+    top: -125px
+    background: $gray
+    border: 2px solid $gray
+    +x
+      top: -117px
+    +t
+      top: -112px
+    +m
+      top: auto
+      bottom: 0
+    &:hover
+      border-color: $bl-dark
+      background: transparent  
+  .slick-prev
+    right: 88px
+    +x
+      right: 92px
+    +t
+      right: 88px
+    +m
+      right: auto
+      left: calc(50% - 56px) 
+  .slick-next
+    right: 24px
+    +x
+      right: 28px
+    +t
+      right: 24px
+    +m
+      right: calc(50% - 56px)  
+
++dark
+  .slider
+    .slick-arrow
+      background: $dark
+      border-color: $dark
+      .icon
+        fill: $wh
+      &:hover
+        border-color: $dark-wh 

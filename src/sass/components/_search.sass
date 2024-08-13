@@ -1,0 +1,76 @@
+.search
+  position: relative
+  width: 21px
+  overflow: hidden
+  transition: width .25s 
+  +m
+    width: 100% 
+  &__input
+    width: 100%
+    height: 48px 
+    padding: 0
+    opacity: 0
+    border: 2px solid $gray
+    border-radius: 24px 
+    +f
+    font-size: 16px
+    color: $bl 
+    opacity: padding .25s, opacity .25s
+    +m
+      padding: 0 22px 0 54px 
+      opacity: 1
+    +placeholder
+      color: $bl 
+      +m
+        color: rgba($bl, .4) 
+  &__btn
+    position: absolute
+    top: 52%
+    left: 0
+    transform: translateY(-50%)
+    font-size: 0
+    transition: left .25s
+    +m
+      left: 18px
+    .icon
+      width: 24px
+      height: 24px
+      fill: $bl-dark
+      transition: fill .25s 
+      +m
+        font-size: 24px
+    &:hover .icon
+      fill: rgba($bl-dark, .75) 
+  &.show
+    width: 352px
+    +d
+      width: 325px
+    +m
+      width: 100% 
+  &.show &__input
+    padding: 0 24px 0 64px
+    opacity: 1 
+    +d
+      padding: 0 16px 0 48px
+    +m
+      padding: 0 24px 0 56px 
+  &.show &__btn
+    left: 24px
+    +d
+      left: 16px
+    +m
+      left: 18px
+
++dark
+  .search
+    &__btn
+      .icon
+        fill: $wh
+      &:hover .icon
+        fill: rgba($wh, .75)
+    &__input
+      border-color: $dark
+      background: $bg-dark 
+      color: $dark-wh
+      +placeholder
+        color: $dark-wh

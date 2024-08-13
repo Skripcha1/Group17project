@@ -1,0 +1,59 @@
+.counter
+  position: relative
+  display: inline-block
+  flex-shrink: 0 
+  width: 176px
+  +m
+    width: 136px
+  &__input
+    width: 100% 
+    height: 64px
+    padding: 0 50px 
+    border-radius: 32px
+    border: 2px solid $gray
+    text-align: center
+    +f
+    font-size: 24px
+    font-weight: 700 
+    color: $bl
+    +m
+      height: 48px
+      padding: 0 40px 
+      border-radius: 24px
+      font-size: 20px 
+  &__btn
+    position: absolute
+    top: 0
+    bottom: 0
+    z-index: 2
+    width: 50px
+    font-size: 0
+    transition: all .25s 
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    +m
+      width: 40px
+    .icon
+      width: 16px
+      height: 16px
+      fill: $bl-dark
+      transition: fill .25s
+    &:hover .icon
+      fill: rgba($bl-dark, .7)
+    &_plus
+      right: 0
+      padding-right: 10px  
+    &_minus
+      left: 0
+      padding-left: 10px
+
++dark
+  .counter
+    &__input
+      border-color: $dark
+      background: $bg-dark
+      color: $dark-wh 
+    &__btn
+      .icon
+        fill: $wh
+      &:hover .icon
+        fill: rgba($wh, .75)
